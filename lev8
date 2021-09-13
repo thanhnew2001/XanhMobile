@@ -1,0 +1,70 @@
+import React from 'react';
+import { Text, View } from 'react-native';
+
+const Cat = () => {
+
+  let cat = {
+    "id": "cat1",
+    "name": "Australian Cat"							
+  }
+  
+  let tiger = {
+    "id": "tiger1",
+    "name": "Bengal Tiger"
+  }
+  
+   let Whale = {
+    "id": "Whale1",
+    "name": "menggalodon Whale"
+  }
+  
+  
+   let  Tyrex = {
+    "id": " Tyrex1",
+    "name": "benthe Tyrex"
+  }
+  
+  
+   let  Horse = {
+    "id": " Horse1",
+    "name": "USA Horse"
+  }
+  
+  
+  
+   let  Shark = {
+    "id": "Shark1",
+    "name": "USA Shark"
+  }
+  
+  return (
+    <View>
+        <Text>{cat.id}</Text>
+        <Text>{cat.name}</Text>
+        
+        <Text>{tiger.id}</Text>
+        <Text>{tiger.name}</Text>
+        
+        <Text>{Whale.id}</Text>
+        <Text>{Whale.name}</Text>  
+        
+        
+        <Text>{Tyrex.id}</Text>
+        <Text>{Tyrex.name}</Text>  
+        
+                
+        <Text>{Horse.id}</Text>
+        <Text>{Horse.name}</Text>  
+        
+        
+                   
+        <Text>{Shark.id}</Text>
+        <Text>{Shark.name}</Text>  
+        
+    </View>
+  );
+}
+
+export default Cat;
+
+
