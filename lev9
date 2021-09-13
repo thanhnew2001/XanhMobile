@@ -1,0 +1,50 @@
+
+ import React, { useState } from 'react';
+import { Text, TextInput, View, Button } from 'react-native';
+
+const Cat = () => {
+   
+  const [cat, setCat] = useState('')
+ 
+  return (
+    <View style={{padding: 10}}>
+    
+      <Text style={{fontSize:50}}>{cat}</Text>
+      
+      <Button title='🦖' 
+      onPress={()=>setCat('🦖')}
+      />
+      <Button title='💐' 
+      onPress={()=>setCat('💐')}
+      />
+     <Button title='🐈' 
+      onPress={()=>setCat('🐈')}
+      />
+      
+    <Button title='🦈' 
+      onPress={()=>setCat('🦈')}
+      />
+ 
+    <Button title='🍜' 
+      onPress={()=>setCat('🍜')}
+      />
+      
+     <Button title='🥞 🧇 🥓🍳🥐 🥯🥪' 
+       onPress={()=>setCat('🥞 🧇 🥓🍳🥐 🥯🥪')}
+      />
+  
+   <Button title='🍎  🍊 🍋 🍌 🍉 🍇 🍓' 
+       onPress={()=>setCat('🍎 🍊 🍋 🍌 🍉 🍇 🍓')}
+      />
+  
+    
+   <Button title='👋🏼🇻🇳❤️👧🏻 🧒🏻 👦🏻 👩🏻 🧑🏻 ' 
+       onPress={()=>setCat('👋🏼🇻🇳❤️👧🏻 🧒🏻 👦🏻 👩🏻 🧑🏻')}
+      />
+  
+    
+    </View>
+  );
+}
+
+export default Cat;
