@@ -1,0 +1,35 @@
+
+import React, {useState} from 'react';
+import { View, StyleSheet, Button, TouchableOpacity, TextInput,Text } from 'react-native';
+import * as Speech from 'expo-speech';
+ 
+export default function App() {
+  const speak = (word) => {
+    Speech.speak(word);
+  };
+ const [name, setName] = useState(0)
+
+  return (
+    <View style={{flex: 1, flexDirection: 'column', alignItems: 'center', flexWrap: 'wrap', margin:20}}>
+      
+     
+  <TextInput
+        placeholder="Enter name"
+        onChangeText={name => setName(name)} 
+      />
+
+  <Button title='🗣'
+     onPress={()=>speak(name)}
+      
+      />
+
+      
+    </View>
+  );
+}
+ 
+ 
+
+
+
+
