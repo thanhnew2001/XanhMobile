@@ -1,0 +1,61 @@
+import * as React from 'react';
+import { View, StyleSheet, Button, TouchableOpacity, Text } from 'react-native';
+import * as Speech from 'expo-speech';
+
+export default function App() {
+  const speak = (word) => {
+    Speech.speak(word);
+  };
+
+  return (
+    <View style={{flex: 1, flexDirection: 'row', alignItems: 'center', flexWrap: 'wrap'}}>
+      <TouchableOpacity onPress={()=>speak('hotdog.')}>
+        <Text style={{fontSize:100}}>🌭  </Text>
+      </TouchableOpacity>
+
+
+ <TouchableOpacity onPress={()=>speak('lollipop')}>
+        <Text style={{fontSize:100}}>🍭</Text>
+      </TouchableOpacity>
+
+
+ <TouchableOpacity onPress={()=>speak('hamburger')}>
+        <Text style={{fontSize:90}}> 🍔</Text>
+      </TouchableOpacity>
+
+
+
+<TouchableOpacity onPress={()=>speak('French fries.')}>
+        <Text style={{fontSize:90}}> 🍟</Text>
+      </TouchableOpacity>
+
+
+
+
+<TouchableOpacity onPress={()=>speak('donut.')}>
+        <Text style={{fontSize:90}}> 🍩</Text>
+      </TouchableOpacity>
+
+
+
+<TouchableOpacity onPress={()=>speak('ice cream.')}>
+        <Text style={{fontSize:90}}> 🍦</Text>
+      </TouchableOpacity>
+
+
+
+
+<TouchableOpacity onPress={()=>speak('cupcanke.')}>
+        <Text style={{fontSize:90}}> 🧁</Text>
+      </TouchableOpacity>
+
+
+
+<TouchableOpacity onPress={()=>speak('milk.')}>
+        <Text style={{fontSize:90}}> 🥛 </Text>
+      </TouchableOpacity>
+
+
+    </View>
+  );
+}
