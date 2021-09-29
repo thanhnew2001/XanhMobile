@@ -1,0 +1,141 @@
+import React, {useState} from 'react';
+import { Text, View, TouchableOpacity } from 'react-native';
+import * as Speech from 'expo-speech';
+ 
+ 
+const HelloWorldApp = () => {
+ 
+  const [dolphin, setDolphin] = useState('❓')
+ 
+  const flipDolphin = ()=>{
+    setDolphin('🐬')
+    Speech.speak('Dolphin')
+  }
+  
+  setTimeout(()=>{
+   setDolphin('❓')
+  },2000)
+
+
+
+  const [tiger, setTiger] = useState('❓')
+ 
+  const flipTiger = ()=>{
+    setTiger('🐅')
+    Speech.speak('tiger')
+  }
+  
+  setTimeout(()=>{
+   setTiger('❓')
+  },2000)
+
+
+
+
+
+const [cat, setCat] = useState('❓')
+ 
+  const flipCat= ()=>{
+    setCat(' 🐈 ')
+    Speech.speak('cat')
+  }
+  
+  setTimeout(()=>{
+   setCat('❓')
+  },2000)
+ 
+
+
+ const [dog, setDog] = useState('❓')
+ 
+  const flipDog= ()=>{
+    setDog(' 🦮 ')
+    Speech.speak('dog')
+  }
+  
+  setTimeout(()=>{
+   setDog('❓')
+  },2000)
+ 
+
+
+
+ const [cow, setCow] = useState('❓')
+ 
+  const flipCow= ()=>{
+    setCow(' 🦮 ')
+    Speech.speak('cow')
+  }
+  
+  setTimeout(()=>{
+   setCow('❓')
+  },2000)
+ 
+
+
+
+
+  const [ Sheep, setSheep] = useState('❓')
+ 
+  const flipSheep= ()=>{
+    setSheep(' 🦮 ')
+    Speech.speak(' Sheep')
+  }
+  
+  setTimeout(()=>{
+   setSheep('❓')
+  },2000)
+ 
+
+
+
+
+  return (
+    <View style={{
+        flex: 1,   justifyContent: 'center',
+        alignItems: 'center'
+      }}>
+ 
+     
+     <TouchableOpacity onPress={()=>flipDolphin()}>
+       <Text style={{fontSize:50}}>{dolphin}</Text>
+     </TouchableOpacity>
+
+
+
+
+       <TouchableOpacity onPress={()=>flipTiger()}>
+       <Text style={{fontSize:50}}>{tiger}</Text>
+     </TouchableOpacity>
+     
+
+
+
+<TouchableOpacity onPress={()=>flipCat()}>
+       <Text style={{fontSize:50}}>{cat}</Text>
+     </TouchableOpacity>
+
+
+
+<TouchableOpacity onPress={()=>flipDog()}>
+       <Text style={{fontSize:50}}>{dog}</Text>
+     </TouchableOpacity>     
+          
+
+
+
+<TouchableOpacity onPress={()=>flipCow()}>
+       <Text style={{fontSize:50}}>{cow}</Text>
+     </TouchableOpacity>     
+
+
+
+
+<TouchableOpacity onPress={()=>flipSheep()}>
+       <Text style={{fontSize:50}}>{Sheep}</Text>
+     </TouchableOpacity>                 
+    </View>
+  );
+}
+ 
+export default HelloWorldApp;
